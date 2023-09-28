@@ -1,0 +1,92 @@
+.head
+{
+	margin-left: 20px;
+	padding-bottom: 20px;
+	background-color: #112C36;
+	padding-top: 10px;
+	font-family: 'Borel', cursive;
+	color: black;
+}
+.sidecon
+{
+	padding-top: 10px;
+	position: absolute;
+	right: 20px;
+}
+.start
+{
+	font-family:'Borel', cursive ;
+	color: #5DFF72;
+	font-size: 25px;
+}
+
+.main{
+	width: 900px;
+	line-height: 25px;
+	font-weight: 2px;
+
+}
+.para{
+	position: relative;
+	font-size: 25px;
+	position: relative;
+	bottom: 10px;
+	width: 900px;
+	margin-left: 10px;
+	line-height: 25px;
+	font-weight: 2px;
+	font-family: borel;
+
+}
+.calc
+{
+	border: 3px solid;
+	border-radius: 3px;
+}
+.res
+{
+	color: blue;
+	font-family: 'Borel', cursive;
+	background-color: black;
+
+}
+#percent
+{
+	color: green;
+	font-size: 35px;
+}
+#quote
+{
+	color: black;
+	font-size: 25px;
+	margin-left: 20px;
+	font-family: 'Pacifico', cursive;
+}
+.input
+{
+	margin-left: 40px;
+	font-size: 20px;
+	font-family: cursive;
+}
+button
+{
+	border-radius: 5px;
+	color: peachpuff;
+	background-color: black;
+	display: inline-block;
+	text-align: center;
+	font-family: borel;
+	font-display: swap;
+}
+table, th, td {
+  border:1px solid black;
+  padding: 20px;
+}
+#climax
+{
+	color: black;
+	font-size: 30px;
+	margin-left: 20px;
+	font-family: 'Pacifico', cursive;
+	line-height: 35px;
+}

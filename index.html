@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Lovecalc</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Borel&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Borel&family=Gravitas+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Borel&family=Gravitas+One&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="head">
+		<a href="index.html"><h2>LoveCalc.net</h2></a>
+		
+	</div>
+	<div class="sidecon">
+		<img src="love1.jpg" height="300px" width="160px">
+		<br><br>
+		<img src="love2.jpeg" height="300px" width="160px">
+         	<br><br>
+		<img src="love3.jpeg" height="300px" width="160px">
+		<br><br>
+		<img src="love4.jpeg" height="300px" width="160px">
+		<br><br>
+		<img src="love5.jpeg" height="300px" width="160px">
+	</div>
+	<div class="main">
+		<h3 class="start">Love Calculator</h3>
+
+        <p class="para">
+        
+   	the Love Calculator provides a score from 0% to 100% that is meant to be an indication of a match in terms of love, based on the names of two people.<br>
+   	<b>Note:</b><br> The higher the percentage, the better the match.Note that like all other love calculators on the Internet, this calculator is intended for amusement only rather than as a real indication of love. Please follow your heart instead of the results of this calculator when considering love.
+
+</p>	
+<br><br>
+<div class="calc">
+	
+		<b><h1 class="res">Result</h1></b>
+		<h2 id="percent"></h2>
+		<p id="quote">this calculator is intended for amusement only rather than as a real indication of love. Please follow your heart instead of the results of this calculator when considering love.
+</p>
+<div class="input">
+	<label>Your Name</label><br>
+<input type="text" id="myna"  name="your name" placeholder="Your Name"><br>
+<label>Your  Partner Name</label><br>
+<input type="text" id="pana" name="your partner name" placeholder="Your Partner Name"><br><br>
+<button onclick="love()">Calculate</button>
+<button><a href="index.html">Reset</a></button>
+
+
+
+	
+
+</div>
+
+
+	
+	
+
+
+</div>	
+<div class="analysis"></div>
+
+<h2>How accurate is this love calculator? see the examples:</h2>
+
+
+<table style="width:100%">
+  <tr>
+    <th>Names</th>
+    <th>Scores</th>
+  </tr>
+  <tr>
+    <td>Johncena-Nikkibella</td>
+    <td>79%</td>
+  </tr>
+  <tr>
+    <td>Thor-Jane</td>
+    <td>21%</td>
+  </tr>
+</table>
+<p id="climax">
+love is considered to be both positive and negative, with its virtue representing human kindness, compassion, and affection—"the unselfish, loyal and benevolent concern for the good of another"—and its vice representing a human moral flaw akin to vanity, selfishness, amour-propre, and egotism, potentially leading people into a type of mania, obsessiveness, or codependency
+<br><br>
+	Sometimes it's hard to find the right words to express how much you love your partner. Fortunately for you, there are a ton of wonderful love quotes and sayings to help—whether you're looking for deep, heartfelt love quotes from a famous writer, or a funny Valentine's Day quote from a comedian.
+	<br><br>
+
+If you need a quote about love to put in your Valentine's Day note, or to celebrate an anniversary, birthday, or another milestone, try one of these love quotes borrowed from the best writers, thinkers, books, and plays</p>
+
+	</div>
+
+
+
+<script type="text/javascript">
+
+	function love(){
+		  let count = 0;
+		 const myna = document.getElementById("myna").value;
+		 const mynal = myna.length;
+		 const marr = myna.split('');
+		 for(let i=0; i<=marr.length;i++)
+		 {
+		 	console.log(marr[i]);
+		 	if (marr[i]=='a'||marr[i]=='e'||marr[i]=='i'||marr[i]=='o'||marr[i]=='u') 
+		 	{
+		 		count += 1;
+}
+		 	if (marr[i]=='A'||marr[i]=='E'||marr[i]=='I'||marr[i]=='O'||marr[i]=='U') 
+		 	{
+		 		count += 1;
+
+		 	}
+		 }
+		   let countto = 0;
+		 const pana = document.getElementById("pana").value;
+		 const panal = pana.length;
+		 const parr = pana.split('');
+		 for(let i=0; i<=parr.length;i++)
+		 {
+		 	if (parr[i]=='a'||parr[i]=='e'||parr[i]=='i'||parr[i]=='o'||parr[i]=='u') 
+		 	{
+		 		countto += 1;
+
+
+		 	}
+		 	if (parr[i]=='A'||parr[i]=='E'||parr[i]=='I'||parr[i]=='O'||parr[i]=='U') 
+		 	{
+		 		countto += 1;
+
+		 	}
+		 }
+		 const myn = count*panal;
+		 const j = mynal-count;
+		 const mynar = myn + j;
+		 const pyn = countto*mynal;
+		 const k = panal-count;
+		 const panar = pyn + j;
+		 const output =Math.round(mynar + panar + count + countto);
+		const qp = mynar + panar + count + countto + '%';
+		if (output<10) {
+		  	document.getElementById("quote").innerHTML ="I think this is not Yours";
+		  }
+		 else if (output<=10 && output<=20) {
+		  	document.getElementById("quote").innerHTML ="Your love is as strong as the love between most children and their vegetables – insubstantial.";
+		  }
+		  else if (output<=21 && output<=30) {
+		  	document.getElementById("quote").innerHTML ="Your love is like that which a parent with a newborn baby feels for sleep – distant and beyond consideration.";
+		  }
+		    else if (output<=31 && output<=40) {
+		  	document.getElementById("quote").innerHTML ="Love like this can be seen in the eyes of a dog wanting to continue playing fetch with its exhausted owner – longing, yet not currently viable.";
+		  }
+		   else if (output<=41 && output<=50) {
+		  	document.getElementById("quote").innerHTML ="Your love is as strong as that between an owner and their pet! Unyielding in its loyalty and comfort, albeit with less than optimal odors.";
+		  }
+
+
+		   else if (output<=51 && output<=60) {
+		  	document.getElementById("quote").innerHTML ="This level of love is equivalent to a cat's love of boxes. It may not be immediately evident, but take a look in the box and you might just find something ready to jump out at you.";
+		  }
+
+		  else if (output<=61 && output<=70) {
+		  	document.getElementById("quote").innerHTML ="Good enough. Might as well check love off your list of things society believes you should've accomplished by now.";
+		  }
+		    else if (output<=71 && output<=80) {
+		  	document.getElementById("quote").innerHTML ="Your love is as strong as that between an owner and their pet! Unyielding in its loyalty and comfort, albeit with less than optimal odors.";
+		  }
+		   else if (output<=81 && output<=90) {
+		  	document.getElementById("quote").innerHTML ="For you guys, one’s heart is, and always will be for the other.";
+		  }
+        else {
+		  	document.getElementById("quote").innerHTML ="You both are two people in love, alone, isolated from the world, that’s beautiful.";
+		  }
+			
+
+		 document.getElementById("percent").innerHTML = qp;
+		 if (output<40)
+		  {
+		  	document.getElementById("percent").style.color = "red";
+
+		  }
+          else if (output<70)
+		  {
+		  	document.getElementById("percent").style.color = "yellow";
+		  }
+		 else
+		  {
+		  	document.getElementById("percent").style.color = "green";
+		  }
+
+	
+
+
+		 
+
+		
+		
+		
+		 
+
+
+	
+		 	
+		 
+		 
+		 		
+		 	}
+		 	
+		 
+		 
+		 
+		 </script>
+		 </body>
+		 </html>
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		  
